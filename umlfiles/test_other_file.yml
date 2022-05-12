@@ -1,0 +1,12 @@
+---
+
+    - name: Create users
+      hosts: db-1-eu
+      gather_facts: false
+      become: true
+
+      tasks:
+        - name: Install psycopg2
+            pip:
+                name: psycopg2-binary
+                executable: pip3
